@@ -1,0 +1,36 @@
+@import url("https://use.typekit.net/cvq2ixe.css");
+
+*{
+    font-family: "fira-sans", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    margin: 0;
+}
+
+
+.vue-devtools__panel[data-v-640ec535] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+    align-items: center;
+    gap: 2px;
+    height: 30px;
+    padding: 4px 4px 4px 5px;
+    box-sizing: border-box;
+    border: 1px solid var(--vue-devtools-widget-border);
+    border-radius: 20px;
+    background-color: var(--vue-devtools-widget-bg);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    color: var(--vue-devtools-widget-fg);
+    box-shadow: 2px 2px 8px var(--vue-devtools-widget-shadow);
+    -webkit-user-select: none;
+    user-select: none;
+    max-width: 150px;
+    transition: max-width .4s ease,padding .5s ease,transform .3s ease,all .4s ease;
+    display: none;
+  }
