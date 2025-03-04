@@ -1,0 +1,155 @@
+<template>
+    <div class="building-shelters-page">
+        <!-- Full-width Banner -->
+        <div class="banner">
+            <img src="@/assets/images/shelter.jpg" alt="Building Shelters Banner" />
+        </div>
+
+        <!-- Content Wrapper -->
+        <div class="content">
+            <!-- Title -->
+            <h2>Our Building Shelters Story</h2>
+
+            <!-- Story Paragraph -->
+            <p>
+                At GMUUK, we are dedicated to providing safe and secure shelters for those in need. Through your generous donations, 
+                we have been able to construct and renovate housing facilities for the homeless and families affected by crises. 
+                Our goal is to ensure that everyone has a roof over their head and a place to call home.
+            </p>
+
+            <p>
+                Your contributions have helped us expand our shelter projects, offering more beds, better facilities, and essential services 
+                to the less fortunate. With your continued support, we aim to build more shelters and transform lives, one home at a time.
+            </p>
+
+            <!-- Bottom Title -->
+            <h3>Keep Supporting Us</h3>
+
+            <!-- Donate Button -->
+            <div class="donate-button-wrapper">
+                <a href="https://www.justgiving.com/ghanamuslimunion" class="donate-button" target="_blank" rel="noopener noreferrer">Donate</a>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    name: 'BuildingShelters',
+};
+</script>
+
+<style scoped>
+/* Full-width Banner Styles */
+.banner {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensure full image is displayed without cuts */
+    display: block;
+}
+
+/* Content Wrapper Styles */
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+.content p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.content h3 {
+    font-size: 1.5rem;
+    margin-top: 40px;
+    color: #333;
+}
+
+/* Donate Button Styles */
+.donate-button-wrapper {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.donate-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.125rem;
+    transition: background-color 0.3s ease;
+}
+
+.donate-button:hover {
+    background-color: #e68a00;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .content {
+        padding: 15px;
+    }
+
+    .content h2 {
+        font-size: 1.5rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+
+    .content h3 {
+        font-size: 1.25rem;
+    }
+
+    .donate-button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content h2 {
+        font-size: 1.25rem;
+    }
+
+    .content p {
+        font-size: 0.95rem;
+    }
+
+    .content h3 {
+        font-size: 1.1rem;
+    }
+
+    .donate-button {
+        font-size: 0.95rem;
+        padding: 6px 12px;
+    }
+}
+</style>

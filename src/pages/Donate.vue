@@ -8,12 +8,11 @@
     <!-- Content Wrapper -->
     <div class="content">
       <!-- Title -->
-      <h1>Click The Buttons Below To Donate To Our Charity</h1><br/>
-      <h2>Also donate towards a GMUUK premises in London</h2>
-  
+      <h1>Thank You For Your Donations</h1><br/>      
+
       <!-- Description -->
       <p class="description">
-        So far you have raised around £6,000 on My Ten Nights over the past 3 years.  Your donations have helped renovate classrooms, school toilet facilities and orphanages in Ghana.  GMUUK has supported food banks and Muslim burial funds in London.  Thank you for your donations and continued support during the month of Ramadan and beyond, may Allah continue to strengthen the bond amongst the Ummah, Ameen.
+        So far you have raised around £6,000 on My Ten Nights over the past 3 years. Your donations have helped renovate classrooms, school toilet facilities, and orphanages in Ghana. GMUUK has supported food banks and Muslim burial funds in London. Thank you for your donations and continued support during the month of Ramadan and beyond, may Allah continue to strengthen the bond amongst the Ummah, Ameen.
       </p>     
 
       <!-- Donation Buttons -->
@@ -28,7 +27,10 @@
       <!-- ✅ Grid Images Fixed & Fully Responsive -->
       <div class="donation-impact">
         <div v-for="(item, index) in donationItems" :key="index" class="donation-item">
-          <img :src="item.image" :alt="item.title" />
+          <!-- ✅ Link added to images -->
+          <a :href="item.link">
+            <img :src="item.image" :alt="item.title" />
+          </a>
           <div class="overlay">
             <p>{{ item.title }}</p>
           </div>
@@ -62,13 +64,13 @@ export default {
   data() {
     return {
       donationItems: [
-        { image: new URL('@/assets/images/food-supply.jpg', import.meta.url).href, title: "Food Distribution" },
-        { image: new URL('@/assets/images/school-supply.jpg', import.meta.url).href, title: "supporting orphans" },
-        { image: new URL('@/assets/images/orphan-image.jpg', import.meta.url).href, title: "sponsor a child to go to school " },
-        { image: new URL('@/assets/images/healthcare.jpg', import.meta.url).href, title: "Community Health Support" },
-        { image: new URL('@/assets/images/legal-aid.jpg', import.meta.url).href, title: "Advise Services" },
-        { image: new URL('@/assets/images/shelter.jpg', import.meta.url).href, title: "Building Shelters" }
-      ],
+  { image: new URL('@/assets/images/food-supply.jpg', import.meta.url).href, title: "Food Distribution", link: "/food-distribution" },      
+  { image: new URL('@/assets/images/school-supply.jpg', import.meta.url).href, title: "Supporting Orphans", link: "/supporting-orphans" },
+  { image: new URL('@/assets/images/orphan-image.jpg', import.meta.url).href, title: "Sponsor a Child to Go to School", link: "/sponsor-a-child" },
+  { image: new URL('@/assets/images/healthcare.jpg', import.meta.url).href, title: "Community Health Support", link: "/community-health-support" },
+  { image: new URL('@/assets/images/legal-aid.jpg', import.meta.url).href, title: "Advice Services", link: "/advice-services" },
+  { image: new URL('@/assets/images/shelter.jpg', import.meta.url).href, title: "Building Shelters", link: "/building-shelters" }
+  ],
     };
   },
 };

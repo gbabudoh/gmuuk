@@ -71,6 +71,7 @@ export default {
   align-items: center;
   z-index: 1000;
   max-width: 90%;
+  border: 2px #fff solid;
 }
 
 .gdpr-text {

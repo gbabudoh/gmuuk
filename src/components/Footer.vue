@@ -44,7 +44,10 @@
 
       <!-- Additional Layer for Copyright -->
       <div class="footer-bottom">
-          <p>© 2024 GMUUK. All rights reserved.</p>
+          <div class="footer-bottom-content">
+              <p>© 2024 GMUUK. All rights reserved.</p>
+              <p class="website-credit">Website by Webbidev (<a href="https://webbidev.com" target="_blank" rel="noopener noreferrer">webbidev.com</a>)</p>
+          </div>
       </div>
   </footer>
 </template>
@@ -138,21 +141,43 @@ export default {
 
 /* Additional Layer for Copyright */
 .footer-bottom {
-  background-color: #222;
-  text-align: center;
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem 0;
   margin-top: 1rem;
   border-top: 1px solid #444;
-  width: 100vw; /* Full width of the viewport */
-  position: relative; /* Ensure it stays within the flow of the page */
-  left: 50%;
-  transform: translateX(-50%); /* Center align the full-width container */
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .footer-bottom p {
   margin: 0;
   font-size: 0.9rem;
   color: #bbb;
+}
+
+/* Website Credit */
+.website-credit {
+  font-size: 0.8rem;
+  color: #bbb;
+}
+
+.website-credit a {
+  color: #ffdd57; /* Highlight color for link */
+  text-decoration: none;
+}
+
+.website-credit a:hover {
+  text-decoration: underline;
 }
 
 /* Responsive Design */
@@ -165,6 +190,19 @@ export default {
 
   .footer-column {
       text-align: center;
+  }
+
+  .footer-bottom-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer-bottom-content p {
+      margin-bottom: 0.5rem;
+  }
+
+  .social-icons {
+    justify-content: center; /* Center the icons on smaller screens */
   }
 }
 </style>

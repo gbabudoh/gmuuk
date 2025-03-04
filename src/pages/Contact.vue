@@ -16,8 +16,9 @@
     <div class="contact-details">
       <h3>Contact Information</h3>
       <p><strong>Telephone:</strong>+ 44 (0) 7923142771</p>
-      <p><strong>Email:</strong> info@gmuuk.org</p>
-      <p><strong>Website:</strong> www.gmuuk.org</p>
+      <p><strong>Email:</strong> <a href="mailto:info@gmuuk.org" style="color: inherit; text-decoration: none;">info@gmuuk.org</a></p>
+      <p><strong>Website:</strong> <a href="https://www.gmuuk.org" target="_blank" style="color: inherit; text-decoration: none;">www.gmuuk.org</a></p>
+
     </div>
   </div>
 </template>

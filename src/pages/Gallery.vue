@@ -33,6 +33,9 @@
       <div class="modal-content" @click.stop>
         <span class="close-button" @click="closeModal">&times;</span>
         <img :src="selectedImage.url" :alt="selectedImage.title" />
+        <div class="modal-caption">
+          {{ selectedImage.caption }}
+        </div>
       </div>
     </div>
   </div>
@@ -61,6 +64,7 @@ export default {
             id: item.id,
             title: item.title.rendered,
             url: item.source_url, // Image URL
+            caption: item.caption.rendered.replace(/<[^>]*>/g, ""), // Remove HTML tags from caption
           }));
 
         this.loading = false;
@@ -98,7 +102,7 @@ export default {
 
 /* Heading */
 .gallery-container h1 {
-  font-size: 28px;
+  font-size: 2.5rem;
   margin-bottom: 20px;
   font-weight: bold;
 }
@@ -194,7 +198,7 @@ export default {
   background: white;
   padding: 20px;
   border-radius: 8px;
-  max-width: 90%; /* Adjusted to take more space */
+  max-width: 40%; /* Adjusted to take more space */
   text-align: center;
   position: relative;
 }
@@ -204,6 +208,14 @@ export default {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
+}
+
+/* Modal Caption */
+.modal-caption {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #555;
+  text-align: left; /* Align caption text to the left */
 }
 
 /* Close Button */
@@ -217,7 +229,6 @@ export default {
   font-weight: bold;
 }
 
-/* Responsive Adjustments */
 /* Responsive Adjustments */
 @media screen and (max-width: 1024px) {
   .gallery-grid {
@@ -257,5 +268,3 @@ export default {
   }
 }
 </style>
-
-
