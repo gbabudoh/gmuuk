@@ -17,13 +17,11 @@
 
       <!-- Donation Buttons -->
       <div class="donation-buttons">
-        <a href="https://mytennights.com/?charity=ghana-muslim-union-uk" target="_blank" class="btn btn-left">My TenNights</a>
-        <a href="https://www.justgiving.com/ghanamuslimunion" target="_blank" class="btn btn-right">Donate</a>
+        <a href="https://mytennights.com/?charity=ghana-muslim-union-uk " target="_blank" class="btn btn-left">My TenNights</a>
+        <a href="https://www.justgiving.com/ghanamuslimunion " target="_blank" class="btn btn-right">Donate</a>
       </div>
 
-      <!-- Section Title -->
-      <h2>See What We Do with Your Donations</h2>
-
+      
       <!-- ✅ Grid Images Fixed & Fully Responsive -->
       <div class="donation-impact">
         <div v-for="(item, index) in donationItems" :key="index" class="donation-item">
@@ -36,12 +34,14 @@
           </div>
         </div>
       </div>
+      <CharityWork />
     </div>
   </div>
 </template>
 
 <script setup>
 import { useHead } from '@vueuse/head';
+import CharityWork from '@/pages/CharityWork.vue';
 
 useHead({
   title: 'Donate - GMUUK',
@@ -50,7 +50,7 @@ useHead({
     { name: 'keywords', content: 'GMUUK donate, charity, Ghanaian Muslim Union, support, community projects, London, Ghana' },
     { property: 'og:title', content: 'Donate - GMUUK' },
     { property: 'og:description', content: 'Support GMUUK by donating to our charity. Help us build a premises in London and support various community projects in the UK and Ghana.' },
-    { property: 'og:url', content: 'https://www.gmuuk.org/donate' },
+    { property: 'og:url', content: 'https://www.gmuuk.org/donate ' },
     { property: 'og:type', content: 'website' },
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: 'Donate - GMUUK' },
@@ -60,20 +60,7 @@ useHead({
 </script>
 
 <script>
-export default {
-  data() {
-    return {
-      donationItems: [
-  { image: new URL('@/assets/images/food-supply.jpg', import.meta.url).href, title: "Food Distribution", link: "/food-distribution" },      
-  { image: new URL('@/assets/images/school-supply.jpg', import.meta.url).href, title: "Supporting Orphans", link: "/supporting-orphans" },
-  { image: new URL('@/assets/images/orphan-image.jpg', import.meta.url).href, title: "Sponsor a Child to Go to School", link: "/sponsor-a-child" },
-  { image: new URL('@/assets/images/healthcare.jpg', import.meta.url).href, title: "Community Health Support", link: "/community-health-support" },
-  { image: new URL('@/assets/images/legal-aid.jpg', import.meta.url).href, title: "Advice Services", link: "/advice-services" },
-  { image: new URL('@/assets/images/shelter.jpg', import.meta.url).href, title: "Building Shelters", link: "/building-shelters" }
-  ],
-    };
-  },
-};
+
 </script>
 
 <style scoped>
@@ -232,5 +219,3 @@ h2 {
   }
 }
 </style>
-
-

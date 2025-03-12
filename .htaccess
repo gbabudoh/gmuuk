@@ -1,0 +1,7 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Redirect all requests to index.html to let Vue handle routing
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]
