@@ -17,5 +17,5 @@ export default defineConfig({
   server: {
     port: 3000,
   },
-  base: '/', // Set the base path to '/' for root deployment
+  base: '/gmuuk', // Set the base path to '/' for root deployment
 });
