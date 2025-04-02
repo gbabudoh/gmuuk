@@ -1,6 +1,5 @@
 {
-  "name": "gmuuk",
-  "homepage": "https://gmuuk.com",
+  "name": "gmuuk",  
   "version": "0.0.0",
   "private": true,
   "type": "module",
